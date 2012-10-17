@@ -1,0 +1,15 @@
+---
+author: ecylmz
+description: Folyolar
+email: ecylmz@bil.omu.edu.tr
+url: fo.ecylmz.com
+domain: ecylmz.com
+intro: ''
+googleanalytics: 'UA-17317907-1'
+googleplus: '104216591877418020240'
+brand: default
+landslide: /usr/bin/landslide
+css: _/default.css
+js: _/default.js
+indextemplate: _/index.erb
+foliotemplate: _/default.erb
