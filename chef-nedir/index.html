@@ -304,9 +304,7 @@ pre, code, tt {
 pre, .gist .gist-file .gist-data {
   font-size: 18px;
   max-height: 485px;
-  padding-top: 0.25em !important;
-  padding-right: 0.5em !important;
-  padding-left: 0.5em !important;
+  padding: 0.25em 0.5em !important;
   overflow: auto;
 }
 
@@ -2265,6 +2263,19 @@ chef istemcide çalışabilir.</li>
             
             
             <section><p>JSON&#39;ı yapılandır: <strong>/etc/chef/solo.json</strong></p>
+
+<pre><code>{
+  &quot;memcached&quot;: {
+    &quot;memory&quot;: &quot;1024&quot;
+  },
+  &quot;run_list&quot;: [
+    &quot;recipe[memcached::install]&quot;,
+    &quot;recipe[apache2::restart]&quot;
+  ]
+}
+</code></pre>
+
+<p>Chef-Solo&#39;yu çalıştır:</p>
 
 <div class="highlight"><pre><span class="nv">$ </span>chef-solo -c /etc/chef/solo.rb -j /etc/chef/solo.sjon
 </pre></div>
