@@ -24,6 +24,7 @@ Ekim 2012
         !sh
         # Önce /opt için izinleri ayarla
         $ sudo chgrp $USER /opt
+        $ sudo chmod g+w /opt
 
         # Unzip ile zip dosyasını aç
         $ cd /opt/ && unzip go_appengine*
