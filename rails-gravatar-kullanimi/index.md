@@ -33,6 +33,8 @@ Kasım 2012
           gravtastic
         end
 
+---
+
 ##  Kullanım
 
 -   Örnek 1: default değerlerle kullanımı
@@ -45,6 +47,8 @@ Kasım 2012
         !ruby
         <%= image_tag @user.gravatar_url(:secure => true) %>
 
+---
+
 ##  Default Değerleri Değiştir
 
 User modeli içerisinde:
@@ -54,6 +58,8 @@ User modeli içerisinde:
                    filetype: :jpg,
                    size:     120,
                    default:  "identicon"
+
+---
 
 ##  Kaynak
 
