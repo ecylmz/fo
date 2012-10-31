@@ -1,4 +1,4 @@
-# DNS Sorgusu
+#   DNS Sorgusu
 
 .fx: first
 
@@ -10,7 +10,7 @@ Temmuz 2012
 
 ---
 
-# DNS
+#   DNS
 
 ---
 
@@ -53,7 +53,7 @@ kullanılan isimleri barındırır. Yani büyük bir veritabanıdır diyebiliriz
 
 ---
 
-# DNS Sorgusu Nasıl Çalışır?
+##  DNS Sorgusu Nasıl Çalışır?
 
 DNS sorgusunun nasıl çalıştığını anlamak için basit bir örnek kullanalım.
 
@@ -63,17 +63,17 @@ Sırasıyla şunlar olmaktadır:
 
 ---
 
-# DNS Sorgusu
+##  DNS Sorgusu
 
-- Web tarayıcısı adres satırına isim girdiğinizi anlar ve ip'sini bulmak için
+-   Web tarayıcısı adres satırına isim girdiğinizi anlar ve ip'sini bulmak için
    yerel çözümleyici çağırır.
 
-- Çözümleyici önbelleği (cache) kontrol eder, eğer daha önceden bu isim için ip
-   eşleştirilmesi yapılmışsa onu kullanır ve web tarayıcısına ip'i verir.
-   Önbellekte eğer ki ip - isim eşleştirmesi yoksa; "host table file" denen
-   dosyaya bakar( Bu Ubuntu'da /etc/hosts dosyasıdır ). Bu dosyada ip'lere
-   isimler statik olarak tanımlanır. Bu dosyada ip'i bulabilirse web tarayıcıya
-   ip'i verir.
+-   Çözümleyici önbelleği (cache) kontrol eder, eğer daha önceden bu isim için ip
+    eşleştirilmesi yapılmışsa onu kullanır ve web tarayıcısına ip'i verir.
+    Önbellekte eğer ki ip - isim eşleştirmesi yoksa; "host table file" denen
+    dosyaya bakar( Bu Ubuntu'da /etc/hosts dosyasıdır ). Bu dosyada ip'lere
+    isimler statik olarak tanımlanır. Bu dosyada ip'i bulabilirse web tarayıcıya
+    ip'i verir.
 
 Örnek bir `/etc/hosts` dosyası:
 
@@ -84,54 +84,54 @@ Sırasıyla şunlar olmaktadır:
 
 ---
 
-# DNS Sorgusu
+##  DNS Sorgusu
 
-- Çözümleyici özyineli olarak bu sorguyu oluşturur ve cihazda tanımlanan,
+-   Çözümleyici özyineli olarak bu sorguyu oluşturur ve cihazda tanımlanan,
    internet üzerindeki bir DNS sunucusuna sorguyu gönderir.Ubuntu'da DNS
    sunucularının adreslerini /etc/resolv.conf'da tanımlıyoruz.
 
-   Örnek bir **resolv.conf** dosyası:
+        Örnek bir **resolv.conf** dosyası:
 
-       nameserver 8.8.8.8
+        nameserver 8.8.8.8
 
 Diyelim ki DNS sunucusu olarak 8.8.8.8'i kullanıyoruz.
 
-- "8.8.8.8" www.example.com için tekrarlı sorgular üretir ve **kök isim
-   sunucusuna** bu sorguları gönderir. (Tabi ki onun da önbelleğinde ip adresi
-   yoksa)
+-   "8.8.8.8" www.example.com için tekrarlı sorgular üretir ve **kök isim
+    sunucusuna** bu sorguları gönderir. (Tabi ki onun da önbelleğinde ip adresi
+    yoksa)
 
-- Kök isim sunucusu ismi çözmez. O sadece ".com" domain'leriyle ilgilenen DNS
-   sunucunun isminin ip'sini verir.
+-   Kök isim sunucusu ismi çözmez. O sadece ".com" domain'leriyle ilgilenen DNS
+    sunucunun isminin ip'sini verir.
 
 ---
 
-# DNS Sorgusu
+##  DNS Sorgusu
 
-- "8.8.8.8" sorguyu üretir ve ".com" domainlerinden sorumlu DNS sunucusuna
-   sorguyu gönderir.
+-   "8.8.8.8" sorguyu üretir ve ".com" domainlerinden sorumlu DNS sunucusuna
+    sorguyu gönderir.
 
-- .com'la ilgilenen sunucu "example.com"'un ip'sini döner.
+-   .com'la ilgilenen sunucu "example.com"'un ip'sini döner.
 
-- "8.8.8.8" example.com'la ilgilenen sunucuya www.example.com için sorgu
-   gönderir.
+-   "8.8.8.8" example.com'la ilgilenen sunucuya www.example.com için sorgu
+    gönderir.
 
-- example.com kendi kaynaklarına bakar. www subdomain'i için
-   yetkilendirildiğinden yani www ile o ilgilendiğinden www.example.com için
-   ip'yi "8.8.8.8"'e verir.
+-   example.com kendi kaynaklarına bakar. www subdomain'i için
+    yetkilendirildiğinden yani www ile o ilgilendiğinden www.example.com için
+    ip'yi "8.8.8.8"'e verir.
 
-- "8.8.8.8" bu cevabı önbelleğine kaydeder ve tanımlanan süre içerisinde bunu
+-   "8.8.8.8" bu cevabı önbelleğine kaydeder ve tanımlanan süre içerisinde bunu
     saklar.
 
 ---
 
-- Yerel isim sunucusunda artık www.example.com'un ip adresi vardır ve
+-   Yerel isim sunucusunda artık www.example.com'un ip adresi vardır ve
     bilgisayarınızdaki çözümleyiciye verir.
 
-- Yerel çözümleyici bu bilgiyi önbelleğine kaydeder.
+-   Yerel çözümleyici bu bilgiyi önbelleğine kaydeder.
 
-- Çözümleyici ip'i web tarayıcısına verir.
+-   Çözümleyici ip'i web tarayıcısına verir.
 
-- Ve web tarayıcı HTTP isteklerini www.example.com'un ip'sine gönderir ve
+-   Ve web tarayıcı HTTP isteklerini www.example.com'un ip'sine gönderir ve
     gelen cevabı render ederek sayfayı ekrana bastırır.
 
 ---
@@ -142,6 +142,6 @@ Diyelim ki DNS sunucusu olarak 8.8.8.8'i kullanıyoruz.
 
 ---
 
-# Kaynak
+##  Kaynak
 
 [http://www.tcpipguide.com/free/t_DNSNameResolutionProcess-2.htm](http://www.tcpipguide.com/free/t_DNSNameResolutionProcess-2.htm)

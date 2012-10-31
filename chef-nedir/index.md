@@ -1,4 +1,4 @@
-# Chef Nedir?
+#   Chef Nedir?
 
 .fx: first
 
@@ -12,111 +12,124 @@ Temmuz 2012
 
 ---
 
-# Chef Nedir?
+#   Chef Nedir?
 
 ---
 
-# Chef
+##  Chef
 
-- Sistem yönetimini kolaylaştırmayı hedefleyen, altyapılarınızı otomatize etme imkanı sağlayan,  merkezi bir sistem tarafından yönetilme amacıyla yazılmış açık kaynaklı bir yazılımdır.
-
----
-
-# Chef ile Yapılabilecekler
-
-- Sistemleri kod yazarak yönetme imkanı sağlar.
-- "Search" özelliği ile sunucular içinde özelliğine göre arama yapar.
-  Ör: Hangi uygulamanın hangi sunucu üzerinde olduğu hakkında
-  bilgi verir.
-- Kütüphaneleri sayesinde mevcut uygulamalarla entegre şekilde çalışır. Nginx, MySQL ...
+-   Sistem yönetimini kolaylaştırmayı hedefleyen, altyapılarınızı otomatize etme imkanı sağlayan,  merkezi bir sistem tarafından yönetilme amacıyla yazılmış açık kaynaklı bir yazılımdır.
 
 ---
 
-# Neden Chef?
+##  Chef ile Yapılabilecekler
 
-- Tekrar edilen işlemleri azaltır.
-- İşler otomatize edildiği için, harcanan süre azalır.
+-   Sistemleri kod yazarak yönetme imkanı sağlar.
 
-  Ör: nginx kurulumu, rails sunucu kurulumu vb...
+-   "Search" özelliği ile sunucular içinde özelliğine göre arama yapar.
 
-- İstenilen sunucuların **hepsinde**, aynı işlemi tek bir kod'la yapmak mümkündür.
+        Ör: Hangi uygulamanın hangi sunucu üzerinde olduğu hakkında
+        bilgi verir.
 
-  Ör: Sistem saatinin 1 saniye ileri alınması, sunucu güncelleştirmeleri, önemli bir paket kurulumu vs ...
+-   Kütüphaneleri sayesinde mevcut uygulamalarla entegre şekilde çalışır.
 
----
-
-# Neden Chef?
-
-### Geliştirici:
-
-- "Benim makinemde bu çalışıyordu."
-- "Ruby on Rails'in x.y.z versiyonu lazım."
-- "Yeri gelmişken; projenin yarına kadar deploy edilmesi gerekiyor."
-
-### Sistem Yöneticisi
-
-- "Bu versiyonu desteklemiyoruz."
-- "Projenin mimari yapısı bizim yapımızla uyuşmuyor."
+        Nginx, MySQL ...
 
 ---
 
-# Chef'in Puppet'dan farklılıkları
+##  Neden Chef?
 
-- Yapılandırma Ruby ile yazılıyor. Nadiren DSL kullanılır.
-- Çok basit bir DSL yapısı vardır.
-- Mevcut alt yapıyla uyumlu bir şekilde çalışır.
-- Chef ile hazırlanan "tarifler" kanonik değildir. Değişkenler sayesinde bir çok
-  chef istemcide çalışabilir.
+-   Tekrar edilen işlemleri azaltır.
+
+-   İşler otomatize edildiği için, harcanan süre azalır.
+
+        Ör: nginx kurulumu, rails sunucu kurulumu vb...
+
+-   İstenilen sunucuların **hepsinde**, aynı işlemi tek bir kod'la yapmak mümkündür.
+
+        Ör: Sistem saatinin 1 saniye ileri alınması, sunucu güncelleştirmeleri,
+        önemli bir paket kurulumu vs ...
 
 ---
 
-# Mimari Yapı
+##  Neden Chef?
+
+**Geliştirici:**
+
+-   "Benim makinemde bu çalışıyordu."
+
+-   "Ruby on Rails'in x.y.z versiyonu lazım."
+
+-   "Yeri gelmişken; projenin yarına kadar deploy edilmesi gerekiyor."
+
+**Sistem Yöneticisi**
+
+-   "Bu versiyonu desteklemiyoruz."
+
+-   "Projenin mimari yapısı bizim yapımızla uyuşmuyor."
+
+---
+
+##  Chef'in Puppet'dan farklılıkları
+
+-   Yapılandırma Ruby ile yazılıyor. Nadiren DSL kullanılır.
+
+-   Çok basit bir DSL yapısı vardır.
+
+-   Mevcut alt yapıyla uyumlu bir şekilde çalışır.
+
+-   Chef ile hazırlanan "tarifler" kanonik değildir. Değişkenler sayesinde bir çok
+    chef istemcide çalışabilir.
+
+---
+
+##  Mimari Yapı
 
 ![chef-basics-nwc](media/chef-basics-nwc.png)
 
 ---
 
-# Mimari Yapı
+##  Mimari Yapı
 
 ![architecture](media/architecture.png)
 
 ---
 
-# Chef Solo
+##  Chef Solo
 
 ![chef-solo](media/chef-solo.png)
 
 ---
 
-# Chef
+##  Chef
 
 ![chef-client](media/chef-client.png)
 
 ---
 
-# Chef Dizin Yapısı
+#   Chef Dizin Yapısı
 
 ---
 
-# Cookbooks
+##  Cookbooks
 
 ![chef-cookbooks](media/chef-cookbooks.png)
 
 ---
 
-# Memcached Cookbook
+##  Memcached Cookbook
 
 ![memcached-cookbook](media/memcached-cookbook.png)
 
 ---
 
-# Memcached Cookbook
+##  Memcached Cookbook
 
 ![memcached-cookbook-1](media/memcached-cookbook-1.png)
 
 ---
 
-# Attributes
+##  Attributes
 
 **cookbooks/memcached/attributes/default.rb**
 
@@ -129,7 +142,7 @@ Değişkenlerin öntanımlı değerlerini `recipes` ve şablonlarda kulanıyoruz
 
 ---
 
-# Recipes
+##  Recipes
 
 **cookbooks/memcached/recipes/service.rb**
 
@@ -143,7 +156,7 @@ Değişkenlerin öntanımlı değerlerini `recipes` ve şablonlarda kulanıyoruz
 
 ---
 
-# Recipes
+## Recipes
 
 **cookbooks/memcached/recipes/install.rb**
 
@@ -164,7 +177,7 @@ Değişkenlerin öntanımlı değerlerini `recipes` ve şablonlarda kulanıyoruz
 
 ---
 
-# Şablonlar
+##  Şablonlar
 
 **cookbooks/memcached/templates/default/memcached.conf.erb**
 
@@ -190,7 +203,7 @@ Değişkenlerin öntanımlı değerlerini `recipes` ve şablonlarda kulanıyoruz
 
 ---
 
-# Chef-Solo'nun çalışması
+##  Chef-Solo'nun çalışması
 
 JSON'ı yapılandır: **/etc/chef/solo.json**
 
@@ -211,13 +224,13 @@ Chef-Solo'yu çalıştır:
 
 ---
 
-# Kullanılabilir Kaynaklar
+##  Kullanılabilir Kaynaklar
 
 ![available_resources](media/available_resources.png)
 
 ---
 
-# User & Group Kaynağı
+##  User & Group Kaynağı
 
     !ruby
     user "random" do
@@ -236,7 +249,7 @@ Chef-Solo'yu çalıştır:
 
 ---
 
-# Cron Kaynağı
+##  Cron Kaynağı
 
     !ruby
     cron "noop" do
@@ -254,7 +267,7 @@ Chef-Solo'yu çalıştır:
 
 ---
 
-# Execute Kaynağı
+##  Execute Kaynağı
 
     !ruby
     execute "build WAR file" do
@@ -270,7 +283,7 @@ Chef-Solo'yu çalıştır:
 
 ---
 
-# Package Kaynağı
+##  Package Kaynağı
 
     !ruby
     package "tar" do
@@ -289,7 +302,7 @@ Chef-Solo'yu çalıştır:
 
 ---
 
-# Script Kaynağı
+##  Script Kaynağı
 
     !ruby
     script "install_something" do
@@ -297,7 +310,7 @@ Chef-Solo'yu çalıştır:
       user "root"
       cwd "/tmp"
       code <<-EOH
-      wget http://example.com/tarball.tar.gz"
+      wget "http://example.com/tarball.tar.gz"
       tar -zxf tarball.tar.gz
       cd tarball
       ./configure
@@ -310,21 +323,27 @@ Chef-Solo'yu çalıştır:
 
 ---
 
-# Kaynakların İçerisinde Kullanılan Metotlar
+##  Kaynakların İçerisinde Kullanılan Metotlar
 
 Genel metotlar:
 
-- action
-- provider
-- Supports
-- ignore_failure
-- not_if / only_if
-- notifies
-- subscribes
+-   action
+
+-   provider
+
+-   Supports
+
+-   ignore_failure
+
+-   not_if / only_if
+
+-   notifies
+
+-   subscribes
 
 ---
 
-# Bildirimler
+##  Bildirimler
 
 **Bir kaynaktan `execute` kaynağına bildirim gönderme
 
@@ -340,17 +359,18 @@ Genel metotlar:
 
 ---
 
-# Roller
+##  Roller
 
-- `Recipe` ve `attributes`'ların birleşiminden oluşur.
-- Düğümler birden fazla rol içerebilir.
+-   `Recipe` ve `attributes`'ların birleşiminden oluşur.
+
+-   Düğümler birden fazla rol içerebilir.
 
     !ruby
     run_list "recipe[apache2]", "recipe[apache2::mod_ssl]", "role[monitor]"
 
 ---
 
-# Rol Tanımlama
+##  Rol Tanımlama
 
     !sh
     $ cat roles/webserver.rb
@@ -367,11 +387,11 @@ Genel metotlar:
 
 ---
 
-# Diğer İmkanlar
+#   Diğer İmkanlar
 
 ---
 
-# Web Kullanıcı Arayüzü
+##  Web Kullanıcı Arayüzü
 
 ** Sinatra web uygulamasıyla düğümleri, cookbook'ları ve rolleri yönet**
 
@@ -379,17 +399,19 @@ Genel metotlar:
 
 ---
 
-# Knife
+##  Knife
 
 Chef-server için istemci aracıdır:
 
-- Düğümleri, cookbook'ları ve attributes'ları listeşer
-- Rol ataması yapar.
-- Yeni cookbook yükler.
+-   Düğümleri, cookbook'ları ve attributes'ları listeşer
+
+-   Rol ataması yapar.
+
+-   Yeni cookbook yükler.
 
 ---
 
-# Knife
+##  Knife
 
 Örnek olabilecek bir kaç knife komutu:
 
@@ -401,7 +423,7 @@ Chef-server için istemci aracıdır:
 
 ---
 
-# Solr
+##  Solr
 
 Düğümlerin niteliklerine göre arama yapar:
 
@@ -420,7 +442,7 @@ Düğümlerin niteliklerine göre arama yapar:
 
 ---
 
-# Kaynak
+##  Kaynak
 
 ![chef](media/chef-logo.png)
 

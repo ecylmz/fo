@@ -321,6 +321,12 @@ pre, .gist .gist-file .gist-data {
   background: #dedede;
 }
 
+blockquote {
+  border-left: solid 8px #FFF;
+  padding: .1ex 1ex;
+  font-style: italic;
+}
+
 li {
   padding: 10px 0;
   font-size: 20px;
@@ -1629,7 +1635,7 @@ div.slide {
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Gerekli Ortam Kurulumu</h1></header>
+            <header><h2>Gerekli Ortam Kurulumu</h2></header>
             
             
             <section><ul>
@@ -1682,7 +1688,7 @@ oluşturuldu.</p>
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Gem Bağımlılıkları</h1></header>
+            <header><h2>Gem Bağımlılıkları</h2></header>
             
             
             <section><p>Her özelliği kullanmak için ekstradan gem kurmak gerekiyor.</p>
@@ -1725,7 +1731,7 @@ oluşturuldu.</p>
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Yapılandırma Dosyaları</h1></header>
+            <header><h2>Yapılandırma Dosyaları</h2></header>
             
             
             <section><ul>
@@ -1766,16 +1772,16 @@ bırakılır.</p>
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Yapılandırma Dosyaları</h1></header>
+            <header><h2>Yapılandırma Dosyaları</h2></header>
             
             
             <section><ul>
-<li><strong>models/my_backup.rb</strong> içerisine <strong>bütün</strong> veritabanlarının yedeğini alan,
+<li><p><strong>models/my_backup.rb</strong> içerisine <strong>bütün</strong> veritabanlarının yedeğini alan,
 sıkıştırıp yerelde bir dizinde barındıran ve bu işlemin sonucunu bize maille
-bilgilendiren bir yapılandırma dosyası yazalım:</li>
-</ul>
+bilgilendiren bir yapılandırma dosyası yazalım:</p>
 
-<p><script src="https://gist.github.com/2964648.js"> </script></p></section>
+<script src="https://gist.github.com/2964648.js"> </script></li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -1802,7 +1808,7 @@ bilgilendiren bir yapılandırma dosyası yazalım:</li>
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>RSync ile Depolama</h1></header>
+            <header><h2>RSync ile Depolama</h2></header>
             
             
             <section><p><strong>models/my_backup.rb</strong> içerisine aşağıdaki satılar eklenir.</p>
@@ -1848,7 +1854,7 @@ bilgilendiren bir yapılandırma dosyası yazalım:</li>
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Backup&#39;ın Çalıştırılması</h1></header>
+            <header><h2>Backup&#39;ın Çalıştırılması</h2></header>
             
             
             <section><ul>
@@ -1864,7 +1870,7 @@ yedeği alınmış veritabanı arşivi bulunur. Yapılan işlemlerin durumunu da
 mail adresine gönderir.</p>
 
 <ul>
-<li>Bu programı Cron görevi ile çalıştırmak için whenever gem&#39;ini kullanalım&hellip;</li>
+<li>  Bu programı Cron görevi ile çalıştırmak için whenever gem&#39;ini kullanalım&hellip;</li>
 </ul></section>
             
           </div>
@@ -1892,7 +1898,7 @@ mail adresine gönderir.</p>
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>whenever Gem&#39;i Kurulumu</h1></header>
+            <header><h2>whenever Gem&#39;i Kurulumu</h2></header>
             
             
             <section><ul>
@@ -1942,7 +1948,7 @@ Backup için ~/Backup dizini içinde olmalı.</p>
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>schedule.rb Dosyası</h1></header>
+            <header><h2>schedule.rb Dosyası</h2></header>
             
             
             <section><p>Cron görevleri burada tanımlanıyor. Bu dosya <strong>config</strong> dizini içindedir.</p>
@@ -1980,7 +1986,7 @@ Backup için ~/Backup dizini içinde olmalı.</p>
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Örnekler</h1></header>
+            <header><h2>Örnekler</h2></header>
             
             
             <section><p>Diğer zamanlama örnekleri :</p>
@@ -2034,7 +2040,7 @@ Backup için ~/Backup dizini içinde olmalı.</p>
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Cron&#39;un Aktif/Pasif Hale Getirilmesi</h1></header>
+            <header><h2>Cron&#39;un Aktif/Pasif Hale Getirilmesi</h2></header>
             
             
             <section><p>Aktif etmek için:</p>
@@ -2074,7 +2080,7 @@ Backup için ~/Backup dizini içinde olmalı.</p>
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Kaynaklar</h1></header>
+            <header><h2>Kaynaklar</h2></header>
             
             
             <section><ul>
@@ -2115,71 +2121,62 @@ Backup için ~/Backup dizini içinde olmalı.</p>
         <td><a href="#slide1">1</a></td>
       </tr>
       
-      
-      <tr id="toc-row-2">
-        <th><a href="#slide2">Gerekli Ortam Kurulumu</a></th>
-        <td><a href="#slide2">2</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-3">
-        <th><a href="#slide3">Gem Bağımlılıkları</a></th>
-        <td><a href="#slide3">3</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-4">
-        <th><a href="#slide4">Yapılandırma Dosyaları</a></th>
-        <td><a href="#slide4">4</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-5">
-        <th><a href="#slide5">Yapılandırma Dosyaları</a></th>
-        <td><a href="#slide5">5</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-6">
-        <th><a href="#slide6">RSync ile Depolama</a></th>
-        <td><a href="#slide6">6</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-7">
-        <th><a href="#slide7">Backup&#39;ın Çalıştırılması</a></th>
-        <td><a href="#slide7">7</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-8">
-        <th><a href="#slide8">whenever Gem&#39;i Kurulumu</a></th>
-        <td><a href="#slide8">8</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-9">
-        <th><a href="#slide9">schedule.rb Dosyası</a></th>
-        <td><a href="#slide9">9</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-10">
-        <th><a href="#slide10">Örnekler</a></th>
-        <td><a href="#slide10">10</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-11">
-        <th><a href="#slide11">Cron&#39;un Aktif/Pasif Hale Getirilmesi</a></th>
-        <td><a href="#slide11">11</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-12">
-        <th><a href="#slide12">Kaynaklar</a></th>
-        <td><a href="#slide12">12</a></td>
-      </tr>
+        
+        <tr id="toc-row-2" class="sub">
+          <th><a href="#slide2">Gerekli Ortam Kurulumu</a></th>
+          <td><a href="#slide2">2</a></td>
+        </tr>
+        
+        <tr id="toc-row-3" class="sub">
+          <th><a href="#slide3">Gem Bağımlılıkları</a></th>
+          <td><a href="#slide3">3</a></td>
+        </tr>
+        
+        <tr id="toc-row-4" class="sub">
+          <th><a href="#slide4">Yapılandırma Dosyaları</a></th>
+          <td><a href="#slide4">4</a></td>
+        </tr>
+        
+        <tr id="toc-row-5" class="sub">
+          <th><a href="#slide5">Yapılandırma Dosyaları</a></th>
+          <td><a href="#slide5">5</a></td>
+        </tr>
+        
+        <tr id="toc-row-6" class="sub">
+          <th><a href="#slide6">RSync ile Depolama</a></th>
+          <td><a href="#slide6">6</a></td>
+        </tr>
+        
+        <tr id="toc-row-7" class="sub">
+          <th><a href="#slide7">Backup&#39;ın Çalıştırılması</a></th>
+          <td><a href="#slide7">7</a></td>
+        </tr>
+        
+        <tr id="toc-row-8" class="sub">
+          <th><a href="#slide8">whenever Gem&#39;i Kurulumu</a></th>
+          <td><a href="#slide8">8</a></td>
+        </tr>
+        
+        <tr id="toc-row-9" class="sub">
+          <th><a href="#slide9">schedule.rb Dosyası</a></th>
+          <td><a href="#slide9">9</a></td>
+        </tr>
+        
+        <tr id="toc-row-10" class="sub">
+          <th><a href="#slide10">Örnekler</a></th>
+          <td><a href="#slide10">10</a></td>
+        </tr>
+        
+        <tr id="toc-row-11" class="sub">
+          <th><a href="#slide11">Cron&#39;un Aktif/Pasif Hale Getirilmesi</a></th>
+          <td><a href="#slide11">11</a></td>
+        </tr>
+        
+        <tr id="toc-row-12" class="sub">
+          <th><a href="#slide12">Kaynaklar</a></th>
+          <td><a href="#slide12">12</a></td>
+        </tr>
+        
       
       
     </table>

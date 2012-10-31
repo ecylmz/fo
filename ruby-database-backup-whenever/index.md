@@ -1,4 +1,4 @@
-# Ruby Database Backup - Whenever
+#   Ruby Database Backup - Whenever
 
 .fx: first
 
@@ -10,14 +10,14 @@ Haziran 2012
 
 ---
 
-# Gerekli Ortam Kurulumu
+##  Gerekli Ortam Kurulumu
 
-- [Backup Gem](https://github.com/meskyanichi/backup)'ini kur:
+-   [Backup Gem](https://github.com/meskyanichi/backup)'ini kur:
 
         !sh
         $ sudo gem install backup
 
-- Yapılandırma dosyasını oluştur:
+-   Yapılandırma dosyasını oluştur:
 
         !sh
         $ backup generate:model --trigger my_backup \
@@ -26,33 +26,33 @@ Haziran 2012
 ~/Backup  dizini altında **config.rb** ve **models/my_backup.rb** dosyaları
 oluşturuldu.
 
-- Log dizinini elle oluşturmak gerekiyor.
+-   Log dizinini elle oluşturmak gerekiyor.
 
         !sh
         $ mkdir ~/Backup/log
 
 ---
 
-# Gem Bağımlılıkları
+##  Gem Bağımlılıkları
 
 Her özelliği kullanmak için ekstradan gem kurmak gerekiyor.
 
-- Amazan S3 için:
+-   Amazan S3 için:
 
         !sh
         $ sudo gem install fog -v '~> 1.1.0'
 
-- Depolama için:
+-   Depolama için:
 
         !sh
         $ sudo gem install net-ssh '~> 2.3.0'
 
 ---
 
-# Yapılandırma Dosyaları
+##  Yapılandırma Dosyaları
 
-- **config.rb** içerisindeki S3 ve OpenSSL ayarları kullanılmıyorsa devre dışı
-  bırakılır.
+-   **config.rb** içerisindeki S3 ve OpenSSL ayarları kullanılmıyorsa devre dışı
+    bırakılır.
 
         !ruby
         #Backup::Configuration::Storage::S3.defaults do |s3|
@@ -63,17 +63,17 @@ Her özelliği kullanmak için ekstradan gem kurmak gerekiyor.
 
 ---
 
-# Yapılandırma Dosyaları
+##  Yapılandırma Dosyaları
 
-- **models/my_backup.rb** içerisine **bütün** veritabanlarının yedeğini alan,
-  sıkıştırıp yerelde bir dizinde barındıran ve bu işlemin sonucunu bize maille
-  bilgilendiren bir yapılandırma dosyası yazalım:
+-   **models/my_backup.rb** içerisine **bütün** veritabanlarının yedeğini alan,
+    sıkıştırıp yerelde bir dizinde barındıran ve bu işlemin sonucunu bize maille
+    bilgilendiren bir yapılandırma dosyası yazalım:
 
-  <script src="https://gist.github.com/2964648.js"> </script>
+    <script src="https://gist.github.com/2964648.js"> </script>
 
 ---
 
-# RSync ile Depolama
+##  RSync ile Depolama
 
 **models/my_backup.rb** içerisine aşağıdaki satılar eklenir.
 
@@ -94,9 +94,9 @@ Her özelliği kullanmak için ekstradan gem kurmak gerekiyor.
 
 ---
 
-# Backup'ın Çalıştırılması
+##  Backup'ın Çalıştırılması
 
-- El ile çalıştırmak için:
+-   El ile çalıştırmak için:
 
         !sh
         $ backup perform --trigger my_backup
@@ -105,24 +105,24 @@ Bu işlem sonucunda ~/Backup dizini altında backups dizini açılır ve içeris
 yedeği alınmış veritabanı arşivi bulunur. Yapılan işlemlerin durumunu da verilen
 mail adresine gönderir.
 
-- Bu programı Cron görevi ile çalıştırmak için whenever gem'ini kullanalım...
+-   Bu programı Cron görevi ile çalıştırmak için whenever gem'ini kullanalım...
 
 ---
 
-# whenever Gem'i Kurulumu
+##  whenever Gem'i Kurulumu
 
-- Kurulum:
+-   Kurulum:
 
         !sh
         $ sudo gem install whenever
 
-- Hangi uygulama için çalıştırılacaksa orada config dizini olmalı:
-  Backup için ~/Backup dizini içinde olmalı.
+-   Hangi uygulama için çalıştırılacaksa orada config dizini olmalı:
+    Backup için ~/Backup dizini içinde olmalı.
 
         !sh
         $ mkdir ~/Backup/config
 
-- Ayar dosyası için:
+-   Ayar dosyası için:
 
         !sh
         $ cd ~/Backup/
@@ -132,7 +132,7 @@ Bu işlem sonrası config dizini altında **schedule.rb** dosyası oluşacaktır
 
 ---
 
-# schedule.rb Dosyası
+##  schedule.rb Dosyası
 
 Cron görevleri burada tanımlanıyor. Bu dosya **config** dizini içindedir.
 
@@ -145,7 +145,7 @@ Backup için gerekli olan **schedule.rb** dosyası içeriği:
 
 ---
 
-# Örnekler
+##  Örnekler
 
 Diğer zamanlama örnekleri :
 
@@ -174,7 +174,7 @@ Diğer zamanlama örnekleri :
 
 ---
 
-# Cron'un Aktif/Pasif Hale Getirilmesi
+##  Cron'un Aktif/Pasif Hale Getirilmesi
 
 Aktif etmek için:
 
@@ -188,8 +188,8 @@ Pasifleştirmek için:
 
 ---
 
-# Kaynaklar
+##  Kaynaklar
 
-- [https://github.com/meskyanichi/backup](https://github.com/meskyanichi/backup)
+-   [https://github.com/meskyanichi/backup](https://github.com/meskyanichi/backup)
 
-- [https://github.com/javan/whenever](https://github.com/javan/whenever)
+-   [https://github.com/javan/whenever](https://github.com/javan/whenever)

@@ -321,6 +321,12 @@ pre, .gist .gist-file .gist-data {
   background: #dedede;
 }
 
+blockquote {
+  border-left: solid 8px #FFF;
+  padding: .1ex 1ex;
+  font-style: italic;
+}
+
 li {
   padding: 10px 0;
   font-size: 20px;
@@ -1770,7 +1776,7 @@ kullanılan isimleri barındırır. Yani büyük bir veritabanıdır diyebiliriz
         <div class="slide">
           <div class="inner">
             
-            <header><h1>DNS Sorgusu Nasıl Çalışır?</h1></header>
+            <header><h2>DNS Sorgusu Nasıl Çalışır?</h2></header>
             
             
             <section><p>DNS sorgusunun nasıl çalıştığını anlamak için basit bir örnek kullanalım.</p>
@@ -1804,7 +1810,7 @@ kullanılan isimleri barındırır. Yani büyük bir veritabanıdır diyebiliriz
         <div class="slide">
           <div class="inner">
             
-            <header><h1>DNS Sorgusu</h1></header>
+            <header><h2>DNS Sorgusu</h2></header>
             
             
             <section><ul>
@@ -1851,19 +1857,19 @@ ip&#39;i verir.</p></li>
         <div class="slide">
           <div class="inner">
             
-            <header><h1>DNS Sorgusu</h1></header>
+            <header><h2>DNS Sorgusu</h2></header>
             
             
             <section><ul>
-<li>Çözümleyici özyineli olarak bu sorguyu oluşturur ve cihazda tanımlanan,
+<li><p>Çözümleyici özyineli olarak bu sorguyu oluşturur ve cihazda tanımlanan,
 internet üzerindeki bir DNS sunucusuna sorguyu gönderir.Ubuntu&#39;da DNS
-sunucularının adreslerini /etc/resolv.conf&#39;da tanımlıyoruz.</li>
+sunucularının adreslerini /etc/resolv.conf&#39;da tanımlıyoruz.</p>
+
+<pre><code>Örnek bir **resolv.conf** dosyası:
+
+nameserver 8.8.8.8
+</code></pre></li>
 </ul>
-
-<p>Örnek bir <strong>resolv.conf</strong> dosyası:</p>
-
-<pre><code>   nameserver 8.8.8.8
-</code></pre>
 
 <p>Diyelim ki DNS sunucusu olarak 8.8.8.8&#39;i kullanıyoruz.</p>
 
@@ -1900,7 +1906,7 @@ sunucunun isminin ip&#39;sini verir.</p></li>
         <div class="slide">
           <div class="inner">
             
-            <header><h1>DNS Sorgusu</h1></header>
+            <header><h2>DNS Sorgusu</h2></header>
             
             
             <section><ul>
@@ -2006,7 +2012,7 @@ gelen cevabı render ederek sayfayı ekrana bastırır.</p></li>
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Kaynak</h1></header>
+            <header><h2>Kaynak</h2></header>
             
             
             <section><p><a href="http://www.tcpipguide.com/free/t_DNSNameResolutionProcess-2.htm">http://www.tcpipguide.com/free/t_DNSNameResolutionProcess-2.htm</a></p></section>
@@ -2068,29 +2074,27 @@ gelen cevabı render ederek sayfayı ekrana bastırır.</p></li>
         <td><a href="#slide5">5</a></td>
       </tr>
       
-      
-      <tr id="toc-row-6">
-        <th><a href="#slide6">DNS Sorgusu Nasıl Çalışır?</a></th>
-        <td><a href="#slide6">6</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-7">
-        <th><a href="#slide7">DNS Sorgusu</a></th>
-        <td><a href="#slide7">7</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-8">
-        <th><a href="#slide8">DNS Sorgusu</a></th>
-        <td><a href="#slide8">8</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-9">
-        <th><a href="#slide9">DNS Sorgusu</a></th>
-        <td><a href="#slide9">9</a></td>
-      </tr>
+        
+        <tr id="toc-row-6" class="sub">
+          <th><a href="#slide6">DNS Sorgusu Nasıl Çalışır?</a></th>
+          <td><a href="#slide6">6</a></td>
+        </tr>
+        
+        <tr id="toc-row-7" class="sub">
+          <th><a href="#slide7">DNS Sorgusu</a></th>
+          <td><a href="#slide7">7</a></td>
+        </tr>
+        
+        <tr id="toc-row-8" class="sub">
+          <th><a href="#slide8">DNS Sorgusu</a></th>
+          <td><a href="#slide8">8</a></td>
+        </tr>
+        
+        <tr id="toc-row-9" class="sub">
+          <th><a href="#slide9">DNS Sorgusu</a></th>
+          <td><a href="#slide9">9</a></td>
+        </tr>
+        
       
       
       <tr id="toc-row-10">
@@ -2104,11 +2108,12 @@ gelen cevabı render ederek sayfayı ekrana bastırır.</p></li>
         <td><a href="#slide11">11</a></td>
       </tr>
       
-      
-      <tr id="toc-row-12">
-        <th><a href="#slide12">Kaynak</a></th>
-        <td><a href="#slide12">12</a></td>
-      </tr>
+        
+        <tr id="toc-row-12" class="sub">
+          <th><a href="#slide12">Kaynak</a></th>
+          <td><a href="#slide12">12</a></td>
+        </tr>
+        
       
       
     </table>
