@@ -27,7 +27,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta id="viewport" name="viewport" content="user-scalable=no" />
-    <title>Komut Satırını Kaydetme</title>
+    <title>Komut Sat&#305;r&#305;n&#305; Kaydetme</title>
     <!-- Styles -->
     
     <style type="text/css" media="print">
@@ -756,7 +756,7 @@ div.slide div.presenter_notes {
     
       
       <style type="text/css" media="screen, projection">
-        /* begin presentation.css */
+        /* begin default.css */
 
 ul li {
   list-style: none;
@@ -787,7 +787,7 @@ ul li:first {
   content: ' ';
 }
 
-li p { display: inline; }
+li p:first-child { display: inline; }
 li pre { margin-left: 2em; }
 
 a {
@@ -835,18 +835,18 @@ div.slide {
   background: -webkit-gradient(linear, left bottom, left top, from(#eee), to(#eaeaea));
   background-color: #eee;
   background: -moz-linear-gradient(bottom, #eee, #eaeaea);
-  border-top-right-radius: 20px;
-  -moz-border-radius-topright: 20px;
-  -webkit-border-top-right-radius: 20px;
+  border-top-right-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -webkit-border-top-right-radius: 15px;
   border-bottom-left-radius: 2px;
-  -moz-border-radius-bottomleft: 20px;
-  -webkit-border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
-  -moz-border-radius-topleft: 20px;
-  -webkit-border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  -moz-border-radius-bottomright: 20px;
-  -webkit-border-bottom-right-radius: 20px;
+  -moz-border-radius-bottomleft: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  -webkit-border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -webkit-border-bottom-right-radius: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -883,7 +883,7 @@ div.slide {
   color: #9c000d;
 }
 
-.slide.right {
+.slide.correct {
   background: #a2dcc1;
   border: 1px solid #eee;
   border-radius: 20px;
@@ -919,7 +919,162 @@ div.slide {
 /* Pygments */
 .err { border: 0px; }
 
-/* end presentation.css */
+/* Definition lists */
+
+dl {
+  margin-top: 20px;
+  padding: 8px;
+}
+
+dt, dd {
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+dt {
+  display: inline;
+  padding: 8px;
+  color: white;
+  background-color: #9c000d;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin-right: 12px;
+}
+
+dd {
+  margin-right: 30px;
+  margin: 20px;
+  padding: 20px;
+  color: #666;
+  -moz-border-radius: 3px;
+  -moz-box-shadow: 0 1px 2px #d1d1d1;
+  -webkit-border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px #d1d1d1;
+  background: #fafafa;
+  border: #ccc 1px solid;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px #d1d1d1;
+}
+
+dd p {
+  margin: 0px;
+  padding: 0px;
+}
+
+/*
+ * Tables
+ *
+ * http://johnsardine.com/freebies/dl-html-css/simple-little-tab/
+ */
+
+div.slide table:not(.highlighttable) {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #666;
+  -moz-border-radius: 3px;
+  -moz-box-shadow: 0 1px 2px #d1d1d1;
+  -webkit-border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px #d1d1d1;
+  background: #eaebec;
+  border: #ccc 1px solid;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px #d1d1d1;
+  text-shadow: 1px 1px 0px #fff;
+  font-size: 20px;
+}
+
+div.slide table:not(.highlighttable) tr.even td {
+  background: #f6f6f6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+  background: -moz-linear-gradient(top, #f8f8f8, #f6f6f6);
+}
+
+div.slide table:not(.highlighttable) th {
+  padding: 21px 25px 22px 25px;
+  border-bottom: 1px solid #e0e0e0; border-top: 1px solid #fafafa;
+  background: #ededed;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+  background: -moz-linear-gradient(top, #ededed, #ebebeb);
+}
+
+div.slide table:not(.highlighttable) th:first-child {
+  padding-left: 20px;
+  text-align: left
+}
+
+div.slide table:not(.highlighttable) a:visited {
+  color: #999999;
+  font-weight: bold;
+  text-decoration: none
+}
+
+div.slide table:not(.highlighttable) a:active,
+div.slide table:not(.highlighttable) a:hover {
+  color: #bd5a35;
+  text-decoration: underline
+}
+
+div.slide table:not(.highlighttable) a:link {
+  color: #666;
+  font-weight: bold;
+  text-decoration: none
+}
+
+div.slide table:not(.highlighttable) tr {
+  padding-left: 20px;
+  text-align: center
+}
+
+div.slide table:not(.highlighttable) tr:first-child th:first-child {
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+div.slide table:not(.highlighttable) tr:first-child th:last-child {
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+div.slide table:not(.highlighttable) tr:last-child td {    border-bottom: 0 }
+
+div.slide table:not(.highlighttable) tr:last-child td:first-child {
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+div.slide table:not(.highlighttable) tr:last-child td:last-child {
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+div.slide table:not(.highlighttable) tr:hover td {
+  background: #f2f2f2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+  background: -moz-linear-gradient(top, #f2f2f2, #f0f0f0);
+}
+
+div.slide table:not(.highlighttable) tr td {
+  padding: 18px;
+  border-bottom: 1px solid #e0e0e0; border-left: 1px solid #e0e0e0; border-top: 1px solid #ffffff;
+  background: #fafafa;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+  background: -moz-linear-gradient(top, #fbfbfb, #fafafa);
+}
+
+div.slide table:not(.highlighttable) tr td:first-child {
+  padding-left: 20px;
+  border-left: 0;
+  text-align: left
+}
+
+/* end default.css */
 
       </style>
       
@@ -1530,10 +1685,19 @@ div.slide {
             currentSlideNo = Number(window.location.hash.replace('#slide', ''));
         }
 
-        // hide context on small screens and iframes
+        // handle small screens and iframes
         if (window.screen.availWidth < 1280 || top != self) {
+	    // no context
             hiddenContext = true;
+	    // no background
+	    (document.body || document.getElementsByTagName('body')[0]).style.background = 'none';
         }
+	// show navigator only on touch screens without iframes
+	if ('ontouchstart' in document.documentElement && top == self) {
+		var list = document.getElementsByClassName('navigator');
+		for (var i = 0, el; el = list[i]; i++)
+			el.style.display = '';
+	}
 
         document.addEventListener('keyup', checkModifierKeyUp, false);
         document.addEventListener('keydown', handleBodyKeyDown, false);
@@ -1575,7 +1739,7 @@ div.slide {
 <body>
   <div id="blank"></div>
 
-  <nav id="left">
+  <nav class="navigator" id="left" style="display: none;">
     <menu id="top">
       <button title="Previous slide" id="prev" class="prev">«</button>
       <button title="Next slide" id="next" class="next">»</button>
@@ -1600,15 +1764,12 @@ div.slide {
         <div class="slide first">
           <div class="inner">
             
-            <header><h1>Komut Satırını Kaydetme</h1></header>
+            <header><h1>Komut Sat&#305;r&#305;n&#305; Kaydetme</h1></header>
             
             
-            <section>
-<p>Emre Can Yılmaz <code>&lt;ecylmz@bil.omu.edu.tr&gt;</code></p>
-
-<p><a href="http://ecylmz.com">http://ecylmz.com/</a></p>
-
-<p>Ağustos 2012</p></section>
+            <section><p>Emre Can Y&#305;lmaz <code>&lt;ecylmz@bil.omu.edu.tr&gt;</code></p>
+<p><a href="http://ecylmz.com"><a href="http://ecylmz.com/">http://ecylmz.com/</a></a></p>
+<p>A&#287;ustos 2012</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1638,16 +1799,12 @@ div.slide {
             <header><h1>Shelr Gem</h1></header>
             
             
-            <section><p>shelr gem&#39;i komut satırını <strong>metin</strong> olarak kaydedip kendi sitesine yükleyen bir gem. Yani oynatılan görüntü resimlerden değil düz metinden oluşuyor.</p>
-
+            <section><p>shelr gem&rsquo;i komut sat&#305;r&#305;n&#305; <strong>metin</strong> olarak kaydedip kendi sitesine y&uuml;kleyen bir gem. Yani oynat&#305;lan g&ouml;r&uuml;nt&uuml; resimlerden de&#287;il d&uuml;z metinden olu&#351;uyor.</p>
 <h2>Kurulum</h2>
-
 <div class="highlight"><pre><span class="nv">$ </span><span class="o">[</span>sudo<span class="o">]</span> gem install shelr
 </pre></div>
 
-
-<p>Detaylar için :</p>
-
+<p>Detaylar i&ccedil;in :</p>
 <p><a href="http://shelr.tv/records/4f49ea4ae557800001000004">asciicast</a></p></section>
             
           </div>
@@ -1675,15 +1832,14 @@ div.slide {
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Komut Satırını Kaydet</h1></header>
+            <header><h1>Komut Sat&#305;r&#305;n&#305; Kaydet</h1></header>
             
             
             <section><div class="highlight"><pre><span class="nv">$ </span>shelr record
 </pre></div>
 
-
-<p>Kayıt başlar ve bundan sonra yazdıklarınız kayıt altına alınır. Kaydı bitirmek
-için <code>exit</code> yazın veya <code>Ctrl + D</code></p></section>
+<p>Kay&#305;t ba&#351;lar ve bundan sonra yazd&#305;klar&#305;n&#305;z kay&#305;t alt&#305;na al&#305;n&#305;r. Kayd&#305; bitirmek
+i&ccedil;in <code>exit</code> yaz&#305;n veya <code>Ctrl + D</code></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1710,17 +1866,15 @@ için <code>exit</code> yazın veya <code>Ctrl + D</code></p></section>
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Yayınlama</h1></header>
+            <header><h1>Yay&#305;nlama</h1></header>
             
             
-            <section><p><a href="http://shelr.tv/">http://shelr.tv/</a> bu adrese Github, Twitter, Google veya
-OpenID hesaplarınızdan biriyle girip kaydolduktan sonra gelen ilk ekranda yazan komutları sırayla girmeniz gerekmektedir.</p>
-
+            <section><p><a href="http://shelr.tv/"><a href="http://shelr.tv/">http://shelr.tv/</a></a> bu adrese Github, Twitter, Google veya
+OpenID hesaplar&#305;n&#305;zdan biriyle girip kaydolduktan sonra gelen ilk ekranda yazan komutlar&#305; s&#305;rayla girmeniz gerekmektedir.</p>
 <div class="highlight"><pre><span class="nv">$ </span>shelr push last
 </pre></div>
 
-
-<p>Bu komut sizin son kaydınız siteye yükler.</p></section>
+<p>Bu komut sizin son kayd&#305;n&#305;z siteye y&uuml;kler.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1747,15 +1901,15 @@ OpenID hesaplarınızdan biriyle girip kaydolduktan sonra gelen ilk ekranda yaza
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Avantajları</h1></header>
+            <header><h1>Avantajlar&#305;</h1></header>
             
             
             <section><ul>
-<li>Vidyo boyutları normalde çok büyük olur ama burada çok çok az.</li>
-<li>Kişinin kayıtlarındaki komutları veya herhangi bir metni kopyalamaya imkan
-veriyor.</li>
-<li>gif&#39;lere göre avantajı hem boyut hem de ileri-geri sardırabilme.</li>
-<li>Bu kayıtları kendi sitemize de gömebiliyoruz.</li>
+<li>Vidyo boyutlar&#305; normalde &ccedil;ok b&uuml;y&uuml;k olur ama burada &ccedil;ok &ccedil;ok az.</li>
+<li>Ki&#351;inin kay&#305;tlar&#305;ndaki komutlar&#305; veya herhangi bir metni kopyalamaya imkan
+  veriyor.</li>
+<li>gif&rsquo;lere g&ouml;re avantaj&#305; hem boyut hem de ileri-geri sard&#305;rabilme.</li>
+<li>Bu kay&#305;tlar&#305; kendi sitemize de g&ouml;mebiliyoruz.</li>
 </ul></section>
             
           </div>
@@ -1787,7 +1941,7 @@ veriyor.</li>
       <caption>Table of Contents</caption>
       
       <tr id="toc-row-1">
-        <th><a href="#slide1">Komut Satırını Kaydetme</a></th>
+        <th><a href="#slide1">Komut Sat&#305;r&#305;n&#305; Kaydetme</a></th>
         <td><a href="#slide1">1</a></td>
       </tr>
       
@@ -1799,19 +1953,19 @@ veriyor.</li>
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide3">Komut Satırını Kaydet</a></th>
+        <th><a href="#slide3">Komut Sat&#305;r&#305;n&#305; Kaydet</a></th>
         <td><a href="#slide3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Yayınlama</a></th>
+        <th><a href="#slide4">Yay&#305;nlama</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Avantajları</a></th>
+        <th><a href="#slide5">Avantajlar&#305;</a></th>
         <td><a href="#slide5">5</a></td>
       </tr>
       

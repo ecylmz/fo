@@ -756,7 +756,7 @@ div.slide div.presenter_notes {
     
       
       <style type="text/css" media="screen, projection">
-        /* begin presentation.css */
+        /* begin default.css */
 
 ul li {
   list-style: none;
@@ -787,7 +787,7 @@ ul li:first {
   content: ' ';
 }
 
-li p { display: inline; }
+li p:first-child { display: inline; }
 li pre { margin-left: 2em; }
 
 a {
@@ -835,18 +835,18 @@ div.slide {
   background: -webkit-gradient(linear, left bottom, left top, from(#eee), to(#eaeaea));
   background-color: #eee;
   background: -moz-linear-gradient(bottom, #eee, #eaeaea);
-  border-top-right-radius: 20px;
-  -moz-border-radius-topright: 20px;
-  -webkit-border-top-right-radius: 20px;
+  border-top-right-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -webkit-border-top-right-radius: 15px;
   border-bottom-left-radius: 2px;
-  -moz-border-radius-bottomleft: 20px;
-  -webkit-border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
-  -moz-border-radius-topleft: 20px;
-  -webkit-border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  -moz-border-radius-bottomright: 20px;
-  -webkit-border-bottom-right-radius: 20px;
+  -moz-border-radius-bottomleft: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  -webkit-border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -webkit-border-bottom-right-radius: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -883,7 +883,7 @@ div.slide {
   color: #9c000d;
 }
 
-.slide.right {
+.slide.correct {
   background: #a2dcc1;
   border: 1px solid #eee;
   border-radius: 20px;
@@ -919,7 +919,162 @@ div.slide {
 /* Pygments */
 .err { border: 0px; }
 
-/* end presentation.css */
+/* Definition lists */
+
+dl {
+  margin-top: 20px;
+  padding: 8px;
+}
+
+dt, dd {
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+dt {
+  display: inline;
+  padding: 8px;
+  color: white;
+  background-color: #9c000d;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin-right: 12px;
+}
+
+dd {
+  margin-right: 30px;
+  margin: 20px;
+  padding: 20px;
+  color: #666;
+  -moz-border-radius: 3px;
+  -moz-box-shadow: 0 1px 2px #d1d1d1;
+  -webkit-border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px #d1d1d1;
+  background: #fafafa;
+  border: #ccc 1px solid;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px #d1d1d1;
+}
+
+dd p {
+  margin: 0px;
+  padding: 0px;
+}
+
+/*
+ * Tables
+ *
+ * http://johnsardine.com/freebies/dl-html-css/simple-little-tab/
+ */
+
+div.slide table:not(.highlighttable) {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #666;
+  -moz-border-radius: 3px;
+  -moz-box-shadow: 0 1px 2px #d1d1d1;
+  -webkit-border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px #d1d1d1;
+  background: #eaebec;
+  border: #ccc 1px solid;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px #d1d1d1;
+  text-shadow: 1px 1px 0px #fff;
+  font-size: 20px;
+}
+
+div.slide table:not(.highlighttable) tr.even td {
+  background: #f6f6f6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+  background: -moz-linear-gradient(top, #f8f8f8, #f6f6f6);
+}
+
+div.slide table:not(.highlighttable) th {
+  padding: 21px 25px 22px 25px;
+  border-bottom: 1px solid #e0e0e0; border-top: 1px solid #fafafa;
+  background: #ededed;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+  background: -moz-linear-gradient(top, #ededed, #ebebeb);
+}
+
+div.slide table:not(.highlighttable) th:first-child {
+  padding-left: 20px;
+  text-align: left
+}
+
+div.slide table:not(.highlighttable) a:visited {
+  color: #999999;
+  font-weight: bold;
+  text-decoration: none
+}
+
+div.slide table:not(.highlighttable) a:active,
+div.slide table:not(.highlighttable) a:hover {
+  color: #bd5a35;
+  text-decoration: underline
+}
+
+div.slide table:not(.highlighttable) a:link {
+  color: #666;
+  font-weight: bold;
+  text-decoration: none
+}
+
+div.slide table:not(.highlighttable) tr {
+  padding-left: 20px;
+  text-align: center
+}
+
+div.slide table:not(.highlighttable) tr:first-child th:first-child {
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+div.slide table:not(.highlighttable) tr:first-child th:last-child {
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+div.slide table:not(.highlighttable) tr:last-child td {    border-bottom: 0 }
+
+div.slide table:not(.highlighttable) tr:last-child td:first-child {
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+div.slide table:not(.highlighttable) tr:last-child td:last-child {
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+div.slide table:not(.highlighttable) tr:hover td {
+  background: #f2f2f2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+  background: -moz-linear-gradient(top, #f2f2f2, #f0f0f0);
+}
+
+div.slide table:not(.highlighttable) tr td {
+  padding: 18px;
+  border-bottom: 1px solid #e0e0e0; border-left: 1px solid #e0e0e0; border-top: 1px solid #ffffff;
+  background: #fafafa;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+  background: -moz-linear-gradient(top, #fbfbfb, #fafafa);
+}
+
+div.slide table:not(.highlighttable) tr td:first-child {
+  padding-left: 20px;
+  border-left: 0;
+  text-align: left
+}
+
+/* end default.css */
 
       </style>
       
@@ -1530,10 +1685,19 @@ div.slide {
             currentSlideNo = Number(window.location.hash.replace('#slide', ''));
         }
 
-        // hide context on small screens and iframes
+        // handle small screens and iframes
         if (window.screen.availWidth < 1280 || top != self) {
+	    // no context
             hiddenContext = true;
+	    // no background
+	    (document.body || document.getElementsByTagName('body')[0]).style.background = 'none';
         }
+	// show navigator only on touch screens without iframes
+	if ('ontouchstart' in document.documentElement && top == self) {
+		var list = document.getElementsByClassName('navigator');
+		for (var i = 0, el; el = list[i]; i++)
+			el.style.display = '';
+	}
 
         document.addEventListener('keyup', checkModifierKeyUp, false);
         document.addEventListener('keydown', handleBodyKeyDown, false);
@@ -1575,7 +1739,7 @@ div.slide {
 <body>
   <div id="blank"></div>
 
-  <nav id="left">
+  <nav class="navigator" id="left" style="display: none;">
     <menu id="top">
       <button title="Previous slide" id="prev" class="prev">«</button>
       <button title="Next slide" id="next" class="next">»</button>
@@ -1603,11 +1767,8 @@ div.slide {
             <header><h1>Avahi Daemon Nedir?</h1></header>
             
             
-            <section>
-<p>Emre Can Yılmaz <code>&lt;ecylmz@bil.omu.edu.tr&gt;</code></p>
-
-<p><a href="http://ecylmz.com">http://ecylmz.com/</a></p>
-
+            <section><p>Emre Can Y&#305;lmaz <code>&lt;ecylmz@bil.omu.edu.tr&gt;</code></p>
+<p><a href="http://ecylmz.com"><a href="http://ecylmz.com/">http://ecylmz.com/</a></a></p>
 <p>Temmuz 2012</p></section>
             
           </div>
@@ -1664,12 +1825,11 @@ div.slide {
           <div class="inner">
             
             
-            <section><p>Avahi mDNS / DNS-SD daemon Apple&#39;ın Zeroconf mimarisinin (ayrıca
-&ldquo;Rendezvous&rdquo; ya da &ldquo;Bonjour&rdquo; olarak bilinir) gerçeklemesidir.</p>
-
+            <section><p>Avahi mDNS / DNS-SD daemon Apple&rsquo;&#305;n Zeroconf mimarisinin (ayr&#305;ca
+&ldquo;Rendezvous&rdquo; ya da &ldquo;Bonjour&rdquo; olarak bilinir) ger&ccedil;eklemesidir.</p>
 <p>Daemon yerel IP adresleri ve mDNS / DNS-SD kullanarak statik hizmetleri kaydeder
-ve avahi-daemon yerel programlar için mDNS kayıtlarını önbellekte tutar ve bunu
-iki IPC API&#39;ler sağlar.</p></section>
+ve avahi-daemon yerel programlar i&ccedil;in mDNS kay&#305;tlar&#305;n&#305; &ouml;nbellekte tutar ve bunu
+iki IPC API&rsquo;ler sa&#287;lar.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1757,11 +1917,10 @@ iki IPC API&#39;ler sağlar.</p></section>
           <div class="inner">
             
             
-            <section><p>avahi-publish-service, Avahi daemon tarafından kullanılmak üzere mDNS / DNS-SD
-servisini, bilgisayar adını veya adres eşleşmesi kayıtlarını yayınlar.</p>
-
-<p>Örneğin bilgisayarınızda çalışan ssh servisini yerel ağa duyurmak istediğinizde
-veya başka servisleri duyurmak istediğimizde işe yarar.</p></section>
+            <section><p>avahi-publish-service, Avahi daemon taraf&#305;ndan kullan&#305;lmak &uuml;zere mDNS / DNS-SD
+servisini, bilgisayar ad&#305;n&#305; veya adres e&#351;le&#351;mesi kay&#305;tlar&#305;n&#305; yay&#305;nlar.</p>
+<p>&Ouml;rne&#287;in bilgisayar&#305;n&#305;zda &ccedil;al&#305;&#351;an ssh servisini yerel a&#287;a duyurmak istedi&#287;inizde
+veya ba&#351;ka servisleri duyurmak istedi&#287;imizde i&#351;e yarar.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1788,19 +1947,16 @@ veya başka servisleri duyurmak istediğimizde işe yarar.</p></section>
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Örnek</h1></header>
+            <header><h1>&Ouml;rnek</h1></header>
             
             
             <section><div class="highlight"><pre><span class="nv">$ </span>avahi-publish -s <span class="s2">&quot;Remote login on my box&quot;</span> _ssh._tcp 22
 </pre></div>
 
-
-<p>Bu şekilde ssh servisini yayınlamış olduk. Bu tip servislerin abşlangıçta
-otomatik yayınlanması isteniyorsa, /etc/avahi/services klasoru altında .service
-uzantılı dosyalar şeklinde ayarları girilmeli.</p>
-
-<p>Örneğin ssh için (/etc/avahi/services/ssh.service):</p>
-
+<p>Bu &#351;ekilde ssh servisini yay&#305;nlam&#305;&#351; olduk. Bu tip servislerin ab&#351;lang&#305;&ccedil;ta
+otomatik yay&#305;nlanmas&#305; isteniyorsa, /etc/avahi/services klasoru alt&#305;nda .service
+uzant&#305;l&#305; dosyalar &#351;eklinde ayarlar&#305; girilmeli.</p>
+<p>&Ouml;rne&#287;in ssh i&ccedil;in (/etc/avahi/services/ssh.service):</p>
 <div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; standalone=&#39;no&#39;?&gt;</span><span class="c">&lt;!--*-nxml-*--&gt;</span>
 <span class="cp">&lt;!DOCTYPE service-group SYSTEM &quot;avahi-service.dtd&quot;&gt;</span>
 
@@ -1813,7 +1969,6 @@ uzantılı dosyalar şeklinde ayarları girilmeli.</p>
     <span class="nt">&lt;port&gt;</span>22<span class="nt">&lt;/port&gt;</span>
   <span class="nt">&lt;/service&gt;</span>
 </pre></div>
-
 
 <p></service-group></p></section>
             
@@ -1843,9 +1998,8 @@ uzantılı dosyalar şeklinde ayarları girilmeli.</p>
           <div class="inner">
             
             
-            <section><p>/etc/avahi/services/*.service dosyalarının aktif olması için avahi-daemon&#39;u
-yeniden başlatmak gerekir.</p>
-
+            <section><p>/etc/avahi/services/*.service dosyalar&#305;n&#305;n aktif olmas&#305; i&ccedil;in avahi-daemon&rsquo;u
+yeniden ba&#351;latmak gerekir.</p>
 <div class="highlight"><pre><span class="nv">$ </span>sudo service avahi-daemon restart
 </pre></div>
 </section>
@@ -1904,19 +2058,16 @@ yeniden başlatmak gerekir.</p>
           <div class="inner">
             
             
-            <section><p>avahi-autoipd merkezi bir sunucuya gerek kalmadan istenilen yerel bir ağ
-aralığından istemcilere ip dağıtmaya yarar. IPv4LL gerçeklemesidir. Öncelikle
-DHCP sunucusunun olmadığı durumlarda kullanılır.</p>
-
-<p>Yönlendirilebilir IP adresine sahip bilgisayarlar dışında bilgisayarlar arasında
-iletişimi sağlamak için IPv4LL adresi atanır ve aşağıdaki ayarları girmek gerekir:</p>
-
+            <section><p>avahi-autoipd merkezi bir sunucuya gerek kalmadan istenilen yerel bir a&#287;
+aral&#305;&#287;&#305;ndan istemcilere ip da&#287;&#305;tmaya yarar. IPv4LL ger&ccedil;eklemesidir. &Ouml;ncelikle
+DHCP sunucusunun olmad&#305;&#287;&#305; durumlarda kullan&#305;l&#305;r.</p>
+<p>Y&ouml;nlendirilebilir IP adresine sahip bilgisayarlar d&#305;&#351;&#305;nda bilgisayarlar aras&#305;nda
+ileti&#351;imi sa&#287;lamak i&ccedil;in IPv4LL adresi atan&#305;r ve a&#351;a&#287;&#305;daki ayarlar&#305; girmek gerekir:</p>
 <pre><code>route add -net 169.254.0.0 netmask 255.255.0.0
 dev eth0 metric 99
 route add default dev eth0 metric 99
 </code></pre>
-
-<p>Bunların yapıldığı betik yolu: <strong>/etc/avahi/avahi-autoipd.action</strong></p></section>
+<p>Bunlar&#305;n yap&#305;ld&#305;&#287;&#305; betik yolu: <strong>/etc/avahi/avahi-autoipd.action</strong></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1972,22 +2123,17 @@ route add default dev eth0 metric 99
           <div class="inner">
             
             
-            <section><p>mDNS/DNS-SD servislerine Avahi daemonu kullanarak gözatmaya yarar, onlar hakkında
-bilgi almamızı sağlar.</p>
-
-<p><strong>Örnek:</strong></p>
-
+            <section><p>mDNS/DNS-SD servislerine Avahi daemonu kullanarak g&ouml;zatmaya yarar, onlar hakk&#305;nda
+bilgi almam&#305;z&#305; sa&#287;lar.</p>
+<p><strong>&Ouml;rnek:</strong></p>
 <div class="highlight"><pre><span class="nv">$ </span>avahi-browse -at
 </pre></div>
 
-
-<p>Yukarıdaki komut yerel ağdaki tüm servislerin listesini ekrana yazdırır.</p>
-
+<p>Yukar&#305;daki komut yerel a&#287;daki t&uuml;m servislerin listesini ekrana yazd&#305;r&#305;r.</p>
 <div class="highlight"><pre><span class="nv">$ </span>avahi-browse -art
 </pre></div>
 
-
-<p>Yukarıdaki komut yerel ağdaki tüm servisleri ve onlar hakkındaki diğer bilgileri
+<p>Yukar&#305;daki komut yerel a&#287;daki t&uuml;m servisleri ve onlar hakk&#305;ndaki di&#287;er bilgileri
 de listeler. (ip, mac, port, hostname, txt bilgilerini)</p></section>
             
           </div>
@@ -2015,12 +2161,11 @@ de listeler. (ip, mac, port, hostname, txt bilgilerini)</p></section>
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>İpucu</h1></header>
+            <header><h1>&#304;pucu</h1></header>
             
             
-            <section><p>Eğer ki sistemdeki sadece yazıcıları veya başka bir özelliğe sahip servisleri
-görüntülemek isterseniz:</p>
-
+            <section><p>E&#287;er ki sistemdeki sadece yaz&#305;c&#305;lar&#305; veya ba&#351;ka bir &ouml;zelli&#287;e sahip servisleri
+g&ouml;r&uuml;nt&uuml;lemek isterseniz:</p>
 <div class="highlight"><pre><span class="nv">$ </span>avahi-browse -art | grep -A 5 -i printer
 </pre></div>
 </section>
@@ -2050,18 +2195,16 @@ görüntülemek isterseniz:</p>
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Detaylı Bilgi:</h1></header>
+            <header><h1>Detayl&#305; Bilgi:</h1></header>
             
             
-            <section><p>Öncelikle man sayfaları:</p>
-
+            <section><p>&Ouml;ncelikle man sayfalar&#305;:</p>
 <div class="highlight"><pre><span class="nv">$ </span>man avahi-publish
 <span class="nv">$ </span>man avahi-autoipd
 <span class="nv">$ </span>man avahi-browse
 </pre></div>
 
-
-<p>Geri kalan detaylar için Google&hellip;</p></section>
+<p>Geri kalan detaylar i&ccedil;in Google&hellip;</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -2128,7 +2271,7 @@ görüntülemek isterseniz:</p>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">Örnek</a></th>
+        <th><a href="#slide7">&Ouml;rnek</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
@@ -2164,13 +2307,13 @@ görüntülemek isterseniz:</p>
       
       
       <tr id="toc-row-13">
-        <th><a href="#slide13">İpucu</a></th>
+        <th><a href="#slide13">&#304;pucu</a></th>
         <td><a href="#slide13">13</a></td>
       </tr>
       
       
       <tr id="toc-row-14">
-        <th><a href="#slide14">Detaylı Bilgi:</a></th>
+        <th><a href="#slide14">Detayl&#305; Bilgi:</a></th>
         <td><a href="#slide14">14</a></td>
       </tr>
       
