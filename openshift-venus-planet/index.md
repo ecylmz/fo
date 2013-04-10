@@ -43,7 +43,7 @@ Nisan 2013
 
 ---
 
-#   Ozelleştir
+#   Özelleştir
 
         !sh
         $ $EDITOR libs/planet.ini
