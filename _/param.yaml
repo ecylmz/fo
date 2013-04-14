@@ -1,5 +1,5 @@
 ---
-author: ecylmz
+author: Emre Can Yılmaz
 description: Folyolar
 email: ecylmz@bil.omu.edu.tr
 url: fo.ecylmz.com
@@ -10,6 +10,6 @@ googleplus: '104216591877418020240'
 brand: default
 landslide: /usr/bin/landslide
 css: _/default.css
-js: _/default.js
+js: _/default.js _/local.js
 indextemplate: _/index.erb
 foliotemplate: _/default.erb
